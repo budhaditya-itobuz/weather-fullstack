@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.error {
+  text-align: center;
+  margin: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+input {
+  border: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.moon {
+  display: none;
+}
+
+.thunder {
+  display: none;
+}
+
+.cloud {
+  display: none;
+}
+
+.container {
+  background-color: #bfd9fc;
+  padding: 70px;
+  z-index: 1;
+}
+
+.card-outer {
+  position: relative;
+  padding: 50px 0;
+}
+
+.weather-card {
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  max-width: 750px;
+  margin: auto;
+  border-radius: 30px;
+}
+.weather-card h2 {
+  font-size: 60px;
+}
+.weather-card h2:after {
+  font-size: 50%;
+  vertical-align: top;
+  content: "o";
+}
+.weather-card h5 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.weather-card .card-body {
+  display: flex;
+}
+.weather-card .temperature {
+  width: 20%;
+}
+.weather-card .location-date {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weather-card .location-date .location {
+  display: flex;
+  margin-top: 10px;
+}
+.weather-card .location-date .location h5 {
+  margin-left: 5px;
+}
+.weather-card .location-date .image {
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+.weather-card .location-date img {
+  width: 100%;
+}
+.weather-card .bar-container {
+  display: flex;
+  width: 5%;
+}
+.weather-card .bar-container .bar {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  height: 50px;
+  width: 3px;
+  border-radius: 70%;
+}
+
+.day .weather-card {
+  background: linear-gradient(90deg, rgb(25, 133, 255) 0%, rgb(45, 187, 254) 62%);
+  z-index: 2;
+}
+.day .weather-card .side-shadow {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  position: absolute;
+  bottom: -50%;
+  left: -15%;
+  z-index: 3;
+  background: linear-gradient(#2ba4ff, #c4e5ff);
+}
+.day .weather-card .sun-shadow-bright {
+  height: 400px;
+  width: 400px;
+  border-radius: 200px;
+  position: absolute;
+  right: -30%;
+  top: -130%;
+  z-index: 1;
+  background: linear-gradient(#C3E5FF, #3ad0ff);
+}
+.day .weather-card .sun-shadow-brighter {
+  height: 350px;
+  width: 350px;
+  border-radius: 200px;
+  position: absolute;
+  right: -30%;
+  top: -124%;
+  z-index: 2;
+  background: linear-gradient(#C3E5FF, #49e3ff);
+}
+.day .sun-out {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: -47px;
+  right: -44px;
+  z-index: 2;
+  filter: blur(4px);
+}
+.day .sun-in {
+  margin: 40px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  position: absolute;
+  background: linear-gradient(45deg, rgb(235, 129, 14) 0%, rgb(255, 255, 179) 62%);
+  top: -61px;
+  right: -61px;
+  z-index: 3;
+}
+
+.night .weather-card {
+  background: linear-gradient(90deg, rgb(45, 98, 250) 0%, rgb(185, 127, 217) 62%);
+}
+.night .weather-card .cloud {
+  display: block;
+  width: 200px;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+.night .weather-card .moon {
+  display: block;
+  position: absolute;
+  width: 100px;
+  top: 16px;
+  right: 7px;
+}
+.night .drop-sticker {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 20px;
+  left: 350px;
+}
+.night .drop-sticker .droplet {
+  margin: 30px;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+.night .drop-sticker .droplet:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  margin: 10px 0;
+}
+.night .drop-sticker .droplet:nth-child(3) {
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+}
+.night .drop-sticker .droplet-group:nth-child(1) {
+  rotate: 214deg;
+}
+.night .drop-sticker .droplet-group:nth-child(2) {
+  rotate: 23deg;
+}
+.night .drop-sticker .droplet-group:nth-child(3) {
+  rotate: 9deg;
+}
+.night .drop-sticker .droplet-group:nth-child(4) {
+  display: none;
+}
+
+.rain .weather-card {
+  background: linear-gradient(90deg, rgb(6, 192, 167) 0%, rgb(138, 255, 166) 62%);
+}
+.rain .cloud {
+  display: block;
+  width: 200px;
+  position: absolute;
+  right: -26px;
+  top: -55px;
+}
+.rain .thunder {
+  display: block;
+  position: absolute;
+  width: 50px;
+  right: 52px;
+  top: 91px;
+  z-index: 2;
+}
+.rain .rain-image {
+  display: inline-block;
+  position: absolute;
+  width: 250px;
+  top: -30%;
+  right: -10%;
+}
+.rain .droplet-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.rain .droplet-group:nth-child(1) {
+  margin-top: 30px;
+}
+.rain .drop-sticker {
+  position: absolute;
+  display: flex;
+  rotate: 12deg;
+  top: 62px;
+  right: -12px;
+}
+.rain .drop-sticker .droplet {
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 30%;
+  filter: blur(4px);
+}/*# sourceMappingURL=styles.css.map */

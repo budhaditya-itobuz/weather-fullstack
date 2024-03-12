@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="theme" class="container" >
+        <form  id="myform">
+            <input placeholder="Enter location"  id="input" name="location" type="text">
+            <button type="submit">Submit</button>
+        </form>
+        <h2 class="error" id="error-handle">
+
+        </h2>
+        <div id="container" class="card-outer" >
+            <div  class="weather-card">
+                <h5 id="condition" ></h5>
+                <div class="card-body">
+                    <div class="temperature">
+                        <h2 id="temp"></h2>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar">
+        
+                        </div>
+                    </div>
+                    <div class="location-date">
+                        <h5><span id="day"></span> <span id="date"></span> </h5>
+                        <div class="location">
+                            <div class="image">
+                                <img src="./image/location.png" alt="location pin">
+                            </div>
+                            <h5 id="place"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloud">
+                    <img src="./image/cloud.svg" alt="cloud">
+                </div>
+                <div class="thunder">
+                    <img  src="./image/thunder.svg" alt="thunder">
+                </div>
+                <div class="side-shadow">
+                </div>
+                <div class="sun-shadow-brighter">
+                </div>
+                <div class="sun-shadow-bright"></div>
+                <div class="moon">
+                    <img src="./image/moon.png" alt="moon">
+                </div>
+                <div class="drop-sticker" >
+                    <div class="droplet-group">
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                    </div>
+                    <div class="droplet-group">
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                    </div>
+                    <div class="droplet-group">
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                    </div>
+                    <div class="droplet-group">
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                        <div class="droplet"></div>
+                    </div>
+                </div>
+                <div class="sun-out">
+                </div>
+                <div class="sun-in">
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>
